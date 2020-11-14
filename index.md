@@ -1,37 +1,9 @@
-## Welcome to GitHub Pages
+Global Enum $WinHttpRequestOption_UserAgentString, _ $WinHttpRequestOption_URL, _ $WinHttpRequestOption_URLCodePage, _ $WinHttpRequestOption_EscapePercentInURL, _ $WinHttpRequestOption_SslErrorIgnoreFlags, _ $WinHttpRequestOption_SelectCertificate, _ $WinHttpRequestOption_EnableRedirects, _ $WinHttpRequestOption_UrlEscapeDisable, _ $WinHttpRequestOption_UrlEscapeDisableQuery, _ $WinHttpRequestOption_SecureProtocols, _ $WinHttpRequestOption_EnableTracing, _ $WinHttpRequestOption_RevertImpersonationOverSsl, _ $WinHttpRequestOption_EnableHttpsToHttpRedirects, _ $WinHttpRequestOption_EnablePassportAuthentication, _ $WinHttpRequestOption_MaxAutomaticRedirects, _ $WinHttpRequestOption_MaxResponseHeaderSize, _ $WinHttpRequestOption_MaxResponseDrainSize, _ $WinHttpRequestOption_EnableHttp1_1, _ $WinHttpRequestOption_EnableCertificateRevocationCheck
 
-You can use the [editor on GitHub](https://github.com/dongshengme/web/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Global CONST $WinHttpRequestOption_SslErrorIgnoreFlags_UnknownCA = 0x0100 Global CONST $WinHttpRequestOption_SslErrorIgnoreFlags_CertWrongUsage = 0x0200 Global CONST $WinHttpRequestOption_SslErrorIgnoreFlags_CertCNInvalid = 0x1000 Global CONST $WinHttpRequestOption_SslErrorIgnoreFlags_CertDateInvalid = 0x2000 Global CONST $WinHttpRequestOption_SslErrorIgnoreFlags_IgnoreAll = 0x3300 ;IGNORE ALL OF THE ABOVE
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+$oHTTP.Option($WinHttpRequestOption_SslErrorIgnoreFlags) = $WinHttpRequestOption_SslErrorIgnoreFlags_IgnoreAll
 
-### Markdown
+or
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dongshengme/web/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+$oHTTP.Option(4) = 0x3300
